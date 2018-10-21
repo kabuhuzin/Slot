@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="slot.css">
+</head>
+<body>
+        <div class="slot-area">
+
+        <table border="5" class="number-area">
+            <tr>
+                <td><h1 id="fot" class="n1">0</h1></td>
+                <td><h1 id="mot" class="n2">0</h1></td>
+                <td><h1 id="hot" class="n3">0</h1></td>
+
+            </tr>
+        
+    </table>
+
+
+        <input type="button" value="stop" id="stop1" class="push1" >
+        <input type="button" value="stop" id="stop2" class="push2" >
+        <input type="button" value="stop" id="stop3" class="push3" >
+
+
+        <input type="button" value="strat" id="strat" class="push4">    
+
+        </div>
+    
+    <script >
+// onkey キー指定　全押追加
+
+        var move1;
+        var move2;
+        var move3;
+   
+
+     function slot(){
+        strat1();
+        strat2();
+        strat3();
+     }
+    
+var sty0 = document.getElementById('strat')
+    sty0.onclick = function (){
+            document.getElementById('strat').disabled = "true";
+            slot();
+            sty1.style.backgroundColor =  "rgb(118, 201, 248)";
+            sty2.style.backgroundColor =  "rgb(118, 201, 248)";
+            sty3.style.backgroundColor =  "rgb(118, 201, 248)";
+        }
+
+
+
+function strat1() {
+   var random1 = document.getElementById('fot');
+   random1.innerText = Math.floor(Math.random()*10);
+     move1 = setTimeout(strat1,100); 
+}
+
+
+function strat2() {
+    var random2 = document.getElementById('mot');
+    random2.innerText = Math.floor(Math.random()*10);
+     move2 = setTimeout(strat2,100); 
+}
+
+function strat3() {
+   var random3 = document.getElementById('hot');
+   random3.innerText = Math.floor(Math.random()*10);
+     move3 = setTimeout(strat3,100);   
+}
+
+var sty1 = document.getElementById('stop1');
+    sty1.onclick = function(){
+            function stop1(){
+                clearTimeout(move1);
+            }   
+            stop1();
+            sty1.style.backgroundColor = "gray";  
+        }
+
+var sty2 = document.getElementById('stop2');
+    sty2.onclick = function(){
+            function stop2(){
+                clearTimeout(move2);
+            }   
+            stop2();
+            sty2.style.backgroundColor = "gray";  
+        }
+            
+
+var sty3 = document.getElementById('stop3');
+    sty3.onclick = function(){
+            document.getElementById('strat').disabled = "";
+                function stop3(){
+                    clearTimeout(move3);
+                }
+                    stop3();
+                    sty3.style.backgroundColor = "gray"; 
+        }
+
+
+
+
+    </script>
+</body>
+</html>
+    

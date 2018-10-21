@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(105, 162, 177);
+}
+
+
+.slot-area{
+    text-align: center;
+}
+
+table{
+    position: relative;
+    top: 100px;
+    width: 600px;
+    height: 100px;
+    margin-left:350px;
+}
+
+tr{
+    color: rgb(28, 32, 14);
+    background-color: rgba(255, 255, 255, 0.972);
+
+}
+
+
+.n1 {
+    font-size: 50px;
+}
+
+.n2{
+    font-size: 50px;
+}
+
+.n3{
+    font-size: 50px;
+}
+
+.push1{
+    background-color:rgb(118, 201, 248);
+    position: relative;
+    top: 200px;
+    right: 135px;
+    width:80px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.push2{
+    background-color:rgb(118, 201, 248);
+    position: relative;
+    top: 200px;
+    right: 20px;
+    width:80px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.push3{
+    background-color:  rgb(118, 201, 248);
+    position: relative;
+    top: 200px;
+    left: 90px;
+    width:80px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.push4{
+    position: absolute;
+    top: 300px;
+    right: 410px;
+    width: 590px;
+    height: 30px;
+
+}
